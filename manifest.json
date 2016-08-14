@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+    "name": "WLoHP",
+    "description": "Shows your Youtube Watch Later videos on Youtube home page, so you don't forget them.",
+    "version": "1.0",
+    "web_accessible_resources": [
+                    "jquery.min.js",
+                    "content.js"
+    ],
+    "content_scripts": [
+                {
+                    "matches": ["*://*.youtube.com/"],
+                    "js": ["jquery.min.js", "content.js"]
+                }
+    ],
+    "permissions": ["activeTab",
+                    "declarativeContent",
+                    "webRequest", 
+                    "*://*.youtube.com/"]
+}
